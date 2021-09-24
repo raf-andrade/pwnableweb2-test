@@ -61,7 +61,9 @@ class User(db.Model):
   @staticmethod
   def hash_password(pw):
     return hashlib.sha1(pw).hexdigest()
-
+  
+def hash_password(pw):
+    return hashlib.sha1(pw).hexdigest()
 
 class Item(db.Model):
   catno = db.Column(db.Integer, primary_key=True)
