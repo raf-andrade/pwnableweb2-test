@@ -87,6 +87,9 @@ class Item(db.Model):
 
   def imgurl(self):
     return flask.url_for('static', filename='img/products/'+self.img_name)
+  
+  def hash_password(pw):
+    return hashlib.sha1(pw).hexdigest()
 
 
 class Order(db.Model):
