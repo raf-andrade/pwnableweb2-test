@@ -115,7 +115,19 @@ def post():
         flask.flash('Could not find user for DM.', 'warning')
         return flask.redirect(flask.request.form['redir'])
     models.Post.post(flask.g.user, text, recipient)
+    
+    
+
+    
+    
+    
+    
+    
   return flask.redirect(flask.request.form['redir'])
+
+
+
+
 
 
 @app.route('/u/<username>')
