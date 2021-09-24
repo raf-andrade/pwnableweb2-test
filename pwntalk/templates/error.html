@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}
+  {% if code == 500 %}
+    Internal Server Error
+  {% endif %}
+{% block body %}
+  {% if code == 500 %}
+    An internal server error occurred.
+    {% if exc %}
+      Details:
+      <div class='well'>{% exc %}</div>
+    {% endif %}
+  {% endif %}
+{% endblock %}

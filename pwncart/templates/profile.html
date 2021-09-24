@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body %}
+  <div class='row'>
+    <div class='col-md-4 col-md-offset-4'>
+      <table class='table'>
+        <tr>
+          <td><b>Username</b></td>
+          <td>{{user.username}}</td>
+        </tr>
+        <tr>
+          <td><b>Email</b></td>
+          <td>{{user.email}}</td>
+        </tr>
+        {% if user.credit %}
+        <tr>
+          <td><b>Credit</b></td>
+          <td>{{user.credit}}</td>
+        </tr>
+        {% endif %}
+      </table>
+    </div>
+  </div>
+{% endblock %}
